@@ -94,6 +94,7 @@ const SidebarWrapper = styled.div`
   background-color: #fff;
   max-width: 150px;
   height: 100vh;
+  position: fixed;
 `;
 
 const LogoSection = styled.div`

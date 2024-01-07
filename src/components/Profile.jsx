@@ -62,7 +62,7 @@ const ProfileWrapper = styled.div`
   flex: 1;
   background-color: #fafafa;
   padding: 10px;
-
+  margin-left: 60px;
   @media screen and (max-width: 768px) {
     width: 100%;
   }
@@ -81,6 +81,7 @@ const UserInformation = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-warp: warp;
   gap: 20px;
   margin-top: 20px;
   margin-bottom: 40px;

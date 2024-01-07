@@ -16,7 +16,6 @@ export default LeftSection;
 const LeftWrapper = styled.div`
   display: flex;
   flex: 1;
-  min-width: 400px;
 
   @media screen and (max-width: 768px) {
     width: 100%;

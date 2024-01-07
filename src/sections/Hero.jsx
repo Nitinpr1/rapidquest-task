@@ -1,5 +1,7 @@
 import styled from "styled-components";
-
+import Barchart from "../components/Barchart";
+import CircularProgress from "@mui/material/CircularProgress";
+import Progressbar from "../components/Progressbar";
 const Hero = () => {
   return (
     <MainWrapper>
@@ -26,10 +28,52 @@ const Hero = () => {
 
         <ContributionWrapper>
           <h4>Contribution Overtime</h4>
+          <Barchart />
         </ContributionWrapper>
 
         <PeersWrapper>
           <h4>How do I compare my peers?</h4>
+          <small>These numbers represent current goal achievement</small>
+          <div>
+            <DropdownWrapper>
+              <div>
+                <p> Age :</p>
+                <select name="Age" id="ageId">
+                  <option value="under 30">under 30</option>
+                  <option value="under 60">under 60</option>
+                </select>
+              </div>
+              <div>
+                <p>Salary :</p>
+                <select name="Salary" id="SalaryId">
+                  <option value="20K-30K">20K-30K</option>
+                  <option value="30K-60K">30K-60K</option>
+                </select>
+              </div>
+              <div>
+                <p>Gender :</p>
+                <select name="Gender" id="GenderId">
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="other">other</option>
+                </select>
+              </div>
+            </DropdownWrapper>
+            <ProgressWrapper>
+              <div>
+                <Progressbar value={78} />
+                <p>Average</p>
+              </div>
+              <div>
+                <Progressbar value={95} />
+                <p>Top</p>
+              </div>
+              <div>
+                <Progressbar value={59} />
+                <p>Me</p>
+              </div>
+            </ProgressWrapper>
+          </div>
         </PeersWrapper>
       </Container>
     </MainWrapper>
@@ -54,7 +98,6 @@ const Container = styled.div`
   align-items: start;
   flex-direction: column;
   margin: 20px;
-  border: 1px solid black;
   padding: 10px;
 
   & > div {
@@ -85,10 +128,55 @@ const GoalWrapper = styled.div`
 
 const ContributionWrapper = styled.div`
   margin-top: 50px;
-  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  color: #363636;
+  & > h4 {
+    margin-bottom: 10px;
+  }
 `;
 
 const PeersWrapper = styled.div`
-  margin-top: 50px;
-  margin-bottom: 50px;
+  width: 100%;
+  margin-top: 20px;
+  color: #363636;
+  & > small {
+    color: #c3c3c3;
+  }
+  & > div {
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+`;
+const DropdownWrapper = styled.div`
+  padding: 10px;
+
+  & > div {
+    display: flex;
+    flex: 1;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid lightgrey;
+    & > select {
+      outline: none;
+      border: none;
+    }
+  }
+`;
+
+const ProgressWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  & > div {
+    text-align: center;
+  }
 `;
