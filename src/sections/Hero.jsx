@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import Barchart from "../components/Barchart";
-import CircularProgress from "@mui/material/CircularProgress";
 import Progressbar from "../components/Progressbar";
 const Hero = () => {
   return (
