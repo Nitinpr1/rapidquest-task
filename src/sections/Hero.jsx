@@ -88,6 +88,7 @@ const MainWrapper = styled.div`
 
   @media screen and (max-width: 768px) {
     width: 100%;
+    padding: 10px;
   }
 `;
 
@@ -105,6 +106,12 @@ const Container = styled.div`
       margin-bottom: 3px;
     }
   }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding: 5px;
+    margin: 0;
+    margin-top: 20px;
+  }
 `;
 
 const GoalWrapper = styled.div`
@@ -119,9 +126,21 @@ const GoalWrapper = styled.div`
     border-bottom: 2px solid #7e70fd;
     padding: 10px;
     color: #363636;
+
     & > small {
       color: #c3c3c3;
     }
+    @media screen and (max-width: 768px) {
+      flex: none;
+    }
+  }
+  & > div:nth-of-type(1) {
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0px;
   }
 `;
 
@@ -133,6 +152,12 @@ const ContributionWrapper = styled.div`
   color: #363636;
   & > h4 {
     margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin-top: 50px;
   }
 `;
 
@@ -140,6 +165,7 @@ const PeersWrapper = styled.div`
   width: 100%;
   margin-top: 20px;
   color: #363636;
+
   & > small {
     color: #c3c3c3;
   }
@@ -167,6 +193,10 @@ const DropdownWrapper = styled.div`
       border: none;
     }
   }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding: 0px;
+  }
 `;
 
 const ProgressWrapper = styled.div`
@@ -174,8 +204,13 @@ const ProgressWrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 20px;
-
   & > div {
     text-align: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    gap: 20px;
+    margin-top: 40px;
   }
 `;

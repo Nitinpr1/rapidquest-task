@@ -24,6 +24,6 @@ const MainWrapper = styled.div`
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    gap: 10px;
+    gap: 0px;
   }
 `;

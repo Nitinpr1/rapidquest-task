@@ -15,25 +15,27 @@ const Profile = () => {
 
         <AccountSection>
           <h3>Today</h3>
-          <MainBalance>
-            <h1>$ 19,892</h1>
-            <small>Account Balance</small>
-          </MainBalance>
-          <Contributions>
-            <h2>$ 4,000</h2>
-            <small>Year-to-date Contributions</small>
-          </Contributions>
+          <div>
+            <MainBalance>
+              <h1>$ 19,892</h1>
+              <small>Account Balance</small>
+            </MainBalance>
+            <Contributions>
+              <h2>$ 4,000</h2>
+              <small>Year-to-date Contributions</small>
+            </Contributions>
 
-          <Interest>
-            <h2>$ 1,892</h2>
-            <small>Total Interest</small>
-          </Interest>
-          <button>
-            <select name="dd">
-              <option value="some text">I want to</option>
-              <option value="some text">some text</option>
-            </select>
-          </button>
+            <Interest>
+              <h2>$ 1,892</h2>
+              <small>Total Interest</small>
+            </Interest>
+            <button>
+              <select name="dd">
+                <option value="some text">I want to</option>
+                <option value="some text">some text</option>
+              </select>
+            </button>
+          </div>
         </AccountSection>
 
         <RecentTransaction>
@@ -65,6 +67,9 @@ const ProfileWrapper = styled.div`
   margin-left: 60px;
   @media screen and (max-width: 768px) {
     width: 100%;
+    margin-left: 0;
+    padding: 0;
+    background-color: white;
   }
 `;
 
@@ -75,6 +80,12 @@ const Container = styled.div`
   flex-direction: column;
   margin-left: 30px;
   color: #363636;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin-left: 0px;
+    padding: 10px;
+  }
 `;
 
 const UserInformation = styled.div`
@@ -90,6 +101,11 @@ const UserInformation = styled.div`
   & > img {
     width: 70px;
   }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 40px;
+    padding: 10px;
+  }
 `;
 
 const AccountSection = styled.div`
@@ -97,26 +113,49 @@ const AccountSection = styled.div`
   justify-content: start;
   align-items: start;
   flex-direction: column;
+  flex-wrap: wrap;
+
   color: #363636;
 
   & > h3 {
     margin-bottom: 10px;
   }
 
-  & > button {
-    margin-top: 15px;
-    padding: 10px 15px 10px 15px;
-    border: none;
-    background-color: #4935ff;
-    border-radius: 8px;
-    color: #fff;
-
-    & > select {
-      background: transparent;
+  & > div {
+    button {
+      margin-top: 15px;
+      padding: 10px 15px 10px 15px;
       border: none;
       outline: none;
+      background-color: #4935ff;
+      border-radius: 8px;
       color: #fff;
+
+      & > select {
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #fff;
+      }
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
     }
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    background-color: #fafafa;
+    border-radius: 8px;
   }
 `;
 
@@ -128,12 +167,19 @@ const MainBalance = styled.div`
     color: #c3c3c3;
     font-size: 12px;
   }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    font-size: 16px;
+  }
 `;
 
 const Contributions = styled.div`
   margin-top: 10px;
   & > small {
     color: #c3c3c3;
+  }
+  @media screen and (max-width: 768px) {
+    margin-top: 0px;
   }
 `;
 
@@ -142,6 +188,9 @@ const Interest = styled.div`
   color: #363636;
   & > small {
     color: #c3c3c3;
+  }
+  @media screen and (max-width: 768px) {
+    margin-top: 0px;
   }
 `;
 
@@ -159,11 +208,22 @@ const RecentTransaction = styled.div`
 
     & > small {
       color: #c3c3c3;
+      font-weight: bold;
     }
 
     & > p {
       font-size: 12px;
       margin-bottom: 10px;
+      font-weight: bold;
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+      }
     }
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding: 15px;
+    background-color: #fafafa;
+    border-radius: 8px;
   }
 `;

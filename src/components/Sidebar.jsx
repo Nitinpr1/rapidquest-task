@@ -95,6 +95,9 @@ const SidebarWrapper = styled.div`
   max-width: 150px;
   height: 100vh;
   position: fixed;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const LogoSection = styled.div`
@@ -130,7 +133,7 @@ const NavigationSection = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      border-radius: 5px;
+      border-radius: 8px;
       padding: 5px;
       cursor: pointer;
       transition: all 0.2s;

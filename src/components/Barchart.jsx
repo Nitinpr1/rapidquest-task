@@ -1,4 +1,5 @@
 import { BarChart } from "@mui/x-charts/BarChart";
+import styled from "styled-components";
 
 const uData = [11, 22, 33, 44, 55, 66, 77, 88, 99];
 const pData = [11, 22, 33, 44, 55, 66, 77, 88, 99];
@@ -15,21 +16,21 @@ const Barchart = () => {
         series={[
           {
             data: pData,
-            label: "Employer: K 73,500",
+            label: "Employer: 73K",
             id: "EmployerId",
             stack: "total",
             color: seriesColors[0],
           },
           {
             data: uData,
-            label: "Employee K 52,500",
+            label: "Employee: 52K",
             id: "EmployeeId",
             stack: "total",
             color: seriesColors[1],
           },
           {
             data: aData,
-            label: "Total Interest K 244,313",
+            label: "Total Interest: 244K",
             id: "TotalId",
             stack: "total",
             color: seriesColors[2],
@@ -39,7 +40,6 @@ const Barchart = () => {
           {
             data: xLabels,
             scaleType: "band",
-            ticks: Math.min(5, xLabels.length),
           },
         ]}
       />

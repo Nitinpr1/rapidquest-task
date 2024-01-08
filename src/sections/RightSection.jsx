@@ -85,6 +85,10 @@ const Container = styled.div`
     padding: 20px;
     color: #363636;
   }
+  @media screen and (max-width: 768px) {
+    padding: 0px;
+    margin: 0px;
+  }
 `;
 
 const SliderWrapper = styled.div`
@@ -168,5 +172,8 @@ const LearnMoreWrapper = styled.div`
 
   & > small {
     color: #c3c3c3;
+  }
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 `;
