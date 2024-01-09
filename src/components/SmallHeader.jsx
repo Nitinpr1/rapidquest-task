@@ -23,6 +23,7 @@ const Container = styled.div`
   display: none;
   justify-content: end;
   padding: 10px;
+  z-index: 2;
   background-color: transparent;
   @media screen and (max-width: 768px) {
     display: flex;

@@ -8,7 +8,12 @@ const Progressbar = ({ value }) => {
         sx={{
           color: "#29d7ac",
         }}
-        style={{ width: "80px", height: "80px" }}
+        style={{
+          minWidth: "80px",
+          minHeight: "80px",
+          width: "7vw",
+          height: "7vw",
+        }}
         variant="determinate"
         value={value}
       />

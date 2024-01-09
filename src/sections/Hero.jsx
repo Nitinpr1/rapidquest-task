@@ -173,13 +173,19 @@ const PeersWrapper = styled.div`
     margin-top: 10px;
     padding: 10px;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
     width: 100%;
+    gap: 20px;
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      padding: 0px;
+      gap: 10px;
+    }
   }
 `;
 const DropdownWrapper = styled.div`
   padding: 10px;
+  width: 100%;
 
   & > div {
     display: flex;
@@ -191,6 +197,7 @@ const DropdownWrapper = styled.div`
     & > select {
       outline: none;
       border: none;
+      background: transparent;
     }
   }
   @media screen and (max-width: 768px) {
@@ -203,7 +210,7 @@ const ProgressWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
   & > div {
     text-align: center;
   }
@@ -211,6 +218,6 @@ const ProgressWrapper = styled.div`
   @media screen and (max-width: 768px) {
     width: 100%;
     gap: 20px;
-    margin-top: 40px;
+    margin-top: 10px;
   }
 `;

@@ -83,9 +83,9 @@ const NavigationSection = styled.div`
     text-decoration: none;
     list-style-type: none;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
 
     & > li {
       display: flex;

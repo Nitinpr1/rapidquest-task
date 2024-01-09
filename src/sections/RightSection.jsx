@@ -152,6 +152,10 @@ const ButtonWrapper = styled.div`
     font-size: 14px;
     font-weight: bold;
   }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 50px;
+    padding: 0px;
+  }
 `;
 
 const LearnMoreWrapper = styled.div`
