@@ -63,7 +63,7 @@ export default Profile;
 const ProfileWrapper = styled.div`
   flex: 1;
   background-color: #fafafa;
-  padding: 10px;
+  padding: 20px;
   margin-left: 60px;
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -78,7 +78,6 @@ const Container = styled.div`
   justify-content: start;
   align-items: start;
   flex-direction: column;
-  margin-left: 30px;
   color: #363636;
 
   @media screen and (max-width: 768px) {
@@ -93,13 +92,16 @@ const UserInformation = styled.div`
   justify-content: center;
   align-items: center;
   flex-warp: warp;
-  gap: 20px;
+  gap: 10px;
   margin-top: 20px;
   margin-bottom: 40px;
   color: #363636;
 
   & > img {
     width: 70px;
+  }
+  & > div {
+    width: 120px;
   }
 
   @media screen and (max-width: 768px) {
@@ -122,7 +124,7 @@ const AccountSection = styled.div`
   }
 
   & > div {
-    button {
+    & > button {
       margin-top: 15px;
       padding: 10px 15px 10px 15px;
       border: none;
@@ -180,6 +182,11 @@ const Contributions = styled.div`
   }
   @media screen and (max-width: 768px) {
     margin-top: 0px;
+    width: 50%;
+  }
+  @media screen and (max-width: 435px) {
+    margin-top: 0px;
+    width: 48%;
   }
 `;
 
@@ -191,6 +198,11 @@ const Interest = styled.div`
   }
   @media screen and (max-width: 768px) {
     margin-top: 0px;
+    width: 45%;
+  }
+  @media screen and (max-width: 435px) {
+    margin-top: 0px;
+    width: 40%;
   }
 `;
 

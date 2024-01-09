@@ -65,7 +65,10 @@ export default RightSection;
 const RightWrapper = styled.div`
   flex: 1;
   background-color: white !important;
-  padding: 10px;
+  padding: 30px;
+  @media screen and (max-width: 1024px) {
+    padding: 20px;
+  }
   @media screen and (max-width: 768px) {
     width: 100%;
   }
@@ -76,7 +79,6 @@ const Container = styled.div`
   justify-content: start;
   align-items: start;
   flex-direction: column;
-  margin: 20px;
 
   & > div {
     width: 100%;
@@ -84,6 +86,9 @@ const Container = styled.div`
     background-color: #fafafa;
     padding: 20px;
     color: #363636;
+    @media screen and (max-width: 1024px) {
+      padding: 10px;
+    }
   }
   @media screen and (max-width: 768px) {
     padding: 0px;
@@ -133,7 +138,6 @@ const ButtonWrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 20px;
-  padding: 8px;
 
   & > button {
     width: 100%;
@@ -151,10 +155,6 @@ const ButtonWrapper = styled.div`
     color: #7e70fd;
     font-size: 14px;
     font-weight: bold;
-  }
-  @media screen and (max-width: 768px) {
-    margin-bottom: 50px;
-    padding: 0px;
   }
 `;
 

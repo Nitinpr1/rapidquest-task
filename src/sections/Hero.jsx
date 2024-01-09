@@ -84,7 +84,7 @@ export default Hero;
 const MainWrapper = styled.div`
   flex: 2;
   background-color: white !important;
-  padding: 10px;
+  padding: 30px;
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -97,7 +97,7 @@ const Container = styled.div`
   justify-content: start;
   align-items: start;
   flex-direction: column;
-  margin: 20px;
+
   padding: 10px;
 
   & > div {
@@ -132,6 +132,11 @@ const GoalWrapper = styled.div`
     }
     @media screen and (max-width: 768px) {
       flex: none;
+      width: 48%;
+    }
+    @media screen and (max-width: 435px) {
+      flex: none;
+      width: 46%;
     }
   }
   & > div:nth-of-type(1) {
@@ -141,6 +146,7 @@ const GoalWrapper = styled.div`
   }
   @media screen and (max-width: 768px) {
     padding: 0px;
+    gap: 20px;
   }
 `;
 
@@ -173,20 +179,13 @@ const PeersWrapper = styled.div`
     margin-top: 10px;
     padding: 10px;
     display: flex;
-    width: 100%;
+    justify-content: space-between;
     gap: 20px;
-    @media screen and (max-width: 768px) {
-      display: flex;
-      flex-direction: column;
-      padding: 0px;
-      gap: 10px;
-    }
+    flex-wrap: wrap;
+    width: 100%;
   }
 `;
 const DropdownWrapper = styled.div`
-  padding: 10px;
-  width: 100%;
-
   & > div {
     display: flex;
     flex: 1;
@@ -200,9 +199,10 @@ const DropdownWrapper = styled.div`
       background: transparent;
     }
   }
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: 1200px) {
+    padding: 0;
     width: 100%;
-    padding: 0px;
   }
 `;
 
@@ -210,7 +210,7 @@ const ProgressWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 20px;
   & > div {
     text-align: center;
   }
@@ -218,6 +218,6 @@ const ProgressWrapper = styled.div`
   @media screen and (max-width: 768px) {
     width: 100%;
     gap: 20px;
-    margin-top: 10px;
+    margin-top: 40px;
   }
 `;
